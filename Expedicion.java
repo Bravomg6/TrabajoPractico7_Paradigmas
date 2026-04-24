@@ -94,5 +94,19 @@ public class Expedicion {
     }
 
     //metodos
-    
+    void validarRequisitos(){
+        
+    }
+    void inicioCronograma(String fecha, String hito){
+
+    }
+    void actualizacionCronograma(ArrayList<Cronograma> cronograma){
+
+    }
+    void nuevoHallazgo(BitacoraDeHallazgo bitacora){
+
+    }
+    void finExpedicion(ArrayList<Cronograma> cronograma){
+
+    }
 }
