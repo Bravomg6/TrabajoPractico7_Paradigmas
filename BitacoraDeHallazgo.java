@@ -7,8 +7,10 @@ import java.util.ArrayList;
  * @version 1.0
  */
 public class BitacoraDeHallazgo {
+    //Atributos
     private ArrayList<Hallazgo> hallazgos;
 
+    //Constructores
     public BitacoraDeHallazgo() {
         this.hallazgos = new ArrayList<>();
     }
@@ -20,15 +22,17 @@ public class BitacoraDeHallazgo {
         this.hallazgos = hallazgos;
     }
 
-    public ArrayList<Hallazgo> getHallazgos() {
-        return this.hallazgos;
-    }
-
-    public void setHallazgos(ArrayList<Hallazgo> hallazgos) {
+    //Set y get
+       public void setHallazgos(ArrayList<Hallazgo> hallazgos) {
         if (hallazgos == null) throw new IllegalArgumentException("La lista no puede ser nula.");
         this.hallazgos = hallazgos;
     }
 
+    
+    public ArrayList<Hallazgo> getHallazgos() {
+        return this.hallazgos;
+    }
+    
     /**
      * Agrega un nuevo registro a la bitácora validando que no sea nulo.
      * @param hallazgo el objeto Hallazgo a guardar

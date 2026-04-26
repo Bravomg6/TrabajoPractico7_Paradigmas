@@ -11,7 +11,7 @@ public class Hallazgo{
     public Hallazgo(){
         this.hallazgo = "";
     }
- /**
+  /**
      * @throws IllegalArgumentException si la descripción está vacía.
      */
     public Hallazgo(String hallazgo) {

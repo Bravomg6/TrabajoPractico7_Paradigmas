@@ -32,7 +32,7 @@ public class Requisitos {
     }
     
     public boolean getAprobado() {
-        return aprobado;
+        return this.aprobado;
     }
 
     // Métodos
@@ -48,12 +48,13 @@ public class Requisitos {
     }
 
     /**
-     * Verifica que la expedición tenga cupos disponibles (mayor a cero).
+     *  Verifica que la expedición tenga investigadores asignados para poder iniciar.
      * @param expedicion La expedición que se desea validar.
      */
     public void verificacionCupo(Expedicion expedicion) {
-        if(expedicion.getCupo() <= 0){
-            this.aprobado = false; // Si no hay cupo, se cancela la aprobación.
+        // Verificamos que el equipo no esté vacío
+        if(expedicion.getEquipo().cantidadDeInvestigadores() == 0){
+            this.aprobado = false; 
         }
     }
 
@@ -61,10 +62,9 @@ public class Requisitos {
      * Verifica que el inventario cuente con las herramientas esenciales.
      * @param herramientas Las herramientas que posee el equipo.
      */
-  public void verificacionHerramientas(Herramientas herramientas){
-        if(herramientas.getcantComputadoras() == 0 || herramientas.getcantScanner() == 0){
-            this.setAprobado(false); // Si falta alguna herramienta, se cancela.
-            System.out.println("Falta alguna herramienta esencial.");
+   public void verificacionHerramientas(Herramientas herramientas){
+        if(herramientas.getCantComputadoras() == 0 || herramientas.getCantScanner() == 0){
+            this.aprobado = false; 
         }
     }
 }

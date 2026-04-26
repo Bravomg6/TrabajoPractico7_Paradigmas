@@ -1,7 +1,6 @@
 /**
  * Clase ejecutable principal del Sistema de Gestión de Expediciones.
  * Demuestra el uso de pruebas manuales y excepciones requeridas,
- * usando exclusivamente los métodos de las clases actuales.
  *
  * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
@@ -33,14 +32,14 @@ public class Main {
         Equipamiento inventarioMalo = new Equipamiento(suministros, herramientasMalas);
         expedicion.setInventario(inventarioMalo);
 
-        // 3. ASIGNANDO PERSONAL (Llenando el cupo para probar tu Excepción)
+        // 3. ASIGNANDO PERSONAL 
         System.out.println("\nAsignando personal al equipo...");
         for (int i = 1; i <= 6; i++) {
             try {
                 Investigador inv = new Investigador("Investigador " + i, "General", "Especialista", true);
                 expedicion.agregarInvestigador(inv);
             } catch (IllegalArgumentException e) {
-                // Va a saltar cuando i llegue a 6
+                // Va a tirar error cuando llegue a 6
                 System.out.println("No se pudo agregar personal: " + e.getMessage());
             }
         }
@@ -49,7 +48,7 @@ public class Main {
         System.out.println("\n--- 1er Intento de Inicio ---");
         expedicion.iniciarExpedicion();
 
-        // 5. CORRIGIENDO LOS REQUISITOS (Usando solo tus Setters)
+        // 5. CORRIGIENDO LOS REQUISITOS 
         if (!expedicion.getEstado().equals("EN CURSO")) {
             System.out.println("\nCorrigiendo problemas climáticos y de inventario...");
             

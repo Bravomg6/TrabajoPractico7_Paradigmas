@@ -26,7 +26,7 @@ public class Herramientas {
         this.cantScanner = cantScanner;
     }
 
-    //Set y get (CORREGIDOS CON MAYÚSCULA EN LA 'C')
+    //Set y get 
     public void setCantComputadoras(int cantComputadoras){
         this.cantComputadoras = cantComputadoras;
     }

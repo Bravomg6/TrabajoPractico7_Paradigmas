@@ -16,7 +16,7 @@ public class Suministros {
         this.botellaAgua = 0;
     }
 
-    /**
+     /**
      * @throws IllegalArgumentException si las cantidades son negativas.
      */
  public Suministros(int paqueteComida, int botellaAgua) {
