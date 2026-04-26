@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Representa el registro de todos los hallazgos de la expedición.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class BitacoraDeHallazgo {

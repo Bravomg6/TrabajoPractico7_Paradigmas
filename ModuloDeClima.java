@@ -1,7 +1,7 @@
 /**
  * Supervisa el entorno meteorológico en la zona.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class ModuloDeClima {
