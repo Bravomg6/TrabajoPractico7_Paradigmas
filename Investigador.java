@@ -2,7 +2,7 @@
 /**
  * Representa a un profesional que participa en la expedición.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class Investigador {

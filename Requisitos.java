@@ -1,8 +1,8 @@
 /**
  * Representa el validador de los requisitos mínimos para iniciar una expedición.
- * Permite comprobar de manera centralizada el estado del clima, el cupo 
+ * * Permite comprobar de manera centralizada el estado del clima, el cupo 
  * y las herramientas necesarias antes de iniciar la misión.
- * * @author Tu Nombre
+ * * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class Requisitos {
@@ -32,7 +32,7 @@ public class Requisitos {
     }
     
     public boolean getAprobado() {
-        return this.aprobado;
+        return aprobado;
     }
 
     // Métodos
@@ -48,13 +48,12 @@ public class Requisitos {
     }
 
     /**
-     * Verifica que la expedición tenga investigadores asignados para poder iniciar.
+     * Verifica que la expedición tenga cupos disponibles (mayor a cero).
      * @param expedicion La expedición que se desea validar.
      */
     public void verificacionCupo(Expedicion expedicion) {
-        // Verificamos que el equipo no esté vacío
-        if(expedicion.getEquipo().cantidadDeInvestigadores() == 0){
-            this.aprobado = false; 
+        if(expedicion.getCupo() <= 0){
+            this.aprobado = false; // Si no hay cupo, se cancela la aprobación.
         }
     }
 
@@ -62,10 +61,10 @@ public class Requisitos {
      * Verifica que el inventario cuente con las herramientas esenciales.
      * @param herramientas Las herramientas que posee el equipo.
      */
-    public void verificacionHerramientas(Herramientas herramientas){
-        // Ahora coincidirá a la perfección con la clase Herramientas
-        if(herramientas.getCantComputadoras() == 0 || herramientas.getCantScanner() == 0){
-            this.aprobado = false; 
+  public void verificacionHerramientas(Herramientas herramientas){
+        if(herramientas.getcantComputadoras() == 0 || herramientas.getcantScanner() == 0){
+            this.setAprobado(false); // Si falta alguna herramienta, se cancela.
+            System.out.println("Falta alguna herramienta esencial.");
         }
     }
 }

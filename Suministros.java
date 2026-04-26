@@ -1,7 +1,7 @@
 /**
  * Modela los víveres de supervivencia básica.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 

@@ -2,7 +2,7 @@
  * Representa una alerta del sistema de clima.
  * Permite almacenar y consultar su estado.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class Alerta {
@@ -19,7 +19,7 @@ public class Alerta {
 
     /**
      * Constructor parametrizado.
-     * @param estadoAlerta El estado inicial de la alerta.
+     * @param estadoAlerta Estado inicial de la alerta.
      */
     public Alerta(boolean estadoAlerta) {
         this.estadoAlerta = estadoAlerta;
@@ -27,7 +27,7 @@ public class Alerta {
 
     /**
      * Modifica el estado de la alerta.
-     * @param estadoAlerta El nuevo estado a asignar.
+     * @param estadoAlerta Nuevo estado a asignar.
      */
     public void setEstadoAlerta(boolean estadoAlerta) {
         this.estadoAlerta = estadoAlerta;

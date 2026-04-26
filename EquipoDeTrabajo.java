@@ -2,7 +2,7 @@ import java.util.ArrayList;
 /**
  * Gestiona el grupo de investigadores asignados a la expedición.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class EquipoDeTrabajo {

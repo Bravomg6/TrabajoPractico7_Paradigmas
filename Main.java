@@ -1,9 +1,9 @@
 /**
  * Clase ejecutable principal del Sistema de Gestión de Expediciones.
  * Demuestra el uso de pruebas manuales y excepciones requeridas,
- * usando EXCLUSIVAMENTE los métodos de las clases actuales.
+ * usando exclusivamente los métodos de las clases actuales.
  *
- * @author Tu Nombre
+ * @author C. Guadalupe Bravo Maggio, Martin Ezequiel Suarez
  * @version 1.0
  */
 public class Main {
