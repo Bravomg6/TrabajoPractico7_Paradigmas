@@ -1,28 +1,30 @@
-
 public class Cronograma {
-    //atributos
-    String fecha;
-    String hito;
-    Boolean realizado;
-    //constructor
+    //Atributos
+    // CORRECCIÓN: Agregué 'private' a todos los atributos.
+    private String fecha;
+    private String hito;
+    private boolean realizado;
+
+    //Constructor
     public Cronograma(){
         this.fecha = "";
         this.hito = "";
         this.realizado = false;
     }
-    public Cronograma(String fecha, String hito, Boolean realizado){
+    public Cronograma(String fecha, String hito, boolean realizado){
         this.fecha = fecha;
         this.hito = hito;
         this.realizado = realizado;
     }
-    //getters y setters
-    public String getfecha(){
+
+    //Getters y setters
+    public String getFecha(){
         return fecha;
     }
-    public String gethito(){
+    public String getHito(){
         return hito;
     }
-    public Boolean getrealizado(){
+    public boolean getRealizado(){
         return realizado;
     }
     public void setFecha(String fecha){
@@ -31,15 +33,14 @@ public class Cronograma {
     public void setHito(String hito){
         this.hito = hito;
     }
-    public void setRealizado(Boolean realizado){
+    public void setRealizado(boolean realizado){
         this.realizado = realizado;
     }
 
-    //metodos
-    void verCronograma(){
+    //Metodos
+    public void verCronograma(){
         System.out.println("Fecha: " + this.fecha);
         System.out.println("Hito: " + this.hito);
         System.out.println("Realizado: " + this.realizado);
     }
-
 }

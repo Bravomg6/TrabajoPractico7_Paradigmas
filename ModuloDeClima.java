@@ -46,7 +46,7 @@ public class ModuloDeClima {
     }
 
     //Metodos
-    public double consultarClima(){
+    public void  consultarClima(){
         if(this.temperatura > this.temperaturaMaxima){
             this.alerta.setEstadoAlerta(true);
         }

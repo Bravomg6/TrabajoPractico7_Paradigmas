@@ -1,28 +1,53 @@
+/**
+ * Representa una alerta del sistema de clima.
+ * Permite almacenar y consultar su estado.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
 public class Alerta {
+
     //Atributos
     private boolean estadoAlerta;
 
-    //Constructores 
-    public Alerta(){
+    /**
+     * Constructor por defecto. Inicializa la alerta como desactivada.
+     */
+    public Alerta() {
         this.estadoAlerta = false;
     }
-    public Alerta(boolean estadoAlerta){
+
+    /**
+     * Constructor parametrizado.
+     * @param estadoAlerta El estado inicial de la alerta.
+     */
+    public Alerta(boolean estadoAlerta) {
         this.estadoAlerta = estadoAlerta;
     }
 
-    //Set y get 
-    public void setEstadoAlerta(boolean estadoAlerta){
+    /**
+     * Modifica el estado de la alerta.
+     * @param estadoAlerta El nuevo estado a asignar.
+     */
+    public void setEstadoAlerta(boolean estadoAlerta) {
         this.estadoAlerta = estadoAlerta;
     }
-    public boolean getEstadoAlerta(){
+
+    /**
+     * Obtiene el estado actual de la alerta.
+     * @return boolean con el estado (true si está encendida, false si no).
+     */
+    public boolean getEstadoAlerta() {
         return estadoAlerta;
     }
-    //Metodo
-    public void mostrarAlerta(){
-        if(this.estadoAlerta){
+
+    /**
+     * Muestra por consola si la alerta está activada o desactivada.
+     */
+    public void mostrarAlerta() {
+        if (this.estadoAlerta) {
             System.out.println("La alerta esta encendida\n");
-        }
-        else if(!this.estadoAlerta){
+        } else {
             System.out.println("La alerta esta desactivada\n");
         }
     }
