@@ -1,3 +1,9 @@
+/**
+ * Gestiona el inventario completo necesario para la expedición.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
 public class Equipamiento{
     //Atributos 
     private Suministros suministros;
@@ -7,7 +13,13 @@ public class Equipamiento{
         this.suministros = new Suministros();
         this.herramientas = new Herramientas();
     }
-    public Equipamiento(Suministros suministros, Herramientas herramientas){
+    /**
+     * 
+     */
+  public Equipamiento(Suministros suministros, Herramientas herramientas) {
+        if (suministros == null || herramientas == null) {
+            throw new IllegalArgumentException("Suministros y Herramientas no pueden ser nulos.");
+        }
         this.suministros = suministros;
         this.herramientas = herramientas;
     }

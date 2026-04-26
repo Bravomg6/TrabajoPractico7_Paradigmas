@@ -1,5 +1,10 @@
 import java.util.ArrayList;
-
+/**
+ * Gestiona el grupo de investigadores asignados a la expedición.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
 public class EquipoDeTrabajo {
     //Atributos
     private ArrayList<Investigador> investigadores;
@@ -23,7 +28,14 @@ public class EquipoDeTrabajo {
     }
     
     //Metodos
-    public void agregarInvestigador(Investigador investigador) { 
+   /**
+     * Agrega un investigador validando que no sea nulo.
+     * @throws IllegalArgumentException si el objeto es nulo.
+     */
+    public void agregarInvestigador(Investigador investigador) {
+        if (investigador == null) {
+            throw new IllegalArgumentException("No se puede agregar un investigador nulo al equipo.");
+        }
         this.investigadores.add(investigador);
     }
 

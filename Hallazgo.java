@@ -1,3 +1,9 @@
+/**
+ * Representa un descubrimiento puntual.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
 public class Hallazgo{
     //Atributos
     private String hallazgo;
@@ -5,7 +11,13 @@ public class Hallazgo{
     public Hallazgo(){
         this.hallazgo = "";
     }
-    public Hallazgo(String hallazgo){
+ /**
+     * @throws IllegalArgumentException si la descripción está vacía.
+     */
+    public Hallazgo(String hallazgo) {
+        if (hallazgo == null || hallazgo.trim().isEmpty()) {
+            throw new IllegalArgumentException("El hallazgo no puede estar vacío.");
+        }
         this.hallazgo = hallazgo;
     }
     //Set y get

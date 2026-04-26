@@ -1,6 +1,12 @@
+/**
+ * Representa un evento o hito dentro de la planificación de la expedición.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
+
 public class Cronograma {
     //Atributos
-    // CORRECCIÓN: Agregué 'private' a todos los atributos.
     private String fecha;
     private String hito;
     private boolean realizado;
@@ -11,7 +17,18 @@ public class Cronograma {
         this.hito = "";
         this.realizado = false;
     }
-    public Cronograma(String fecha, String hito, boolean realizado){
+    
+    /**
+     * Constructor con validación de datos.
+     * @throws IllegalArgumentException si la fecha o el hito están vacíos.
+     */
+  public Cronograma(String fecha, String hito, boolean realizado) {
+        if (fecha == null || fecha.trim().isEmpty()) {
+            throw new IllegalArgumentException("La fecha no puede ser nula o vacía.");
+        }
+        if (hito == null || hito.trim().isEmpty()) {
+            throw new IllegalArgumentException("El hito no puede ser nulo o vacío.");
+        }
         this.fecha = fecha;
         this.hito = hito;
         this.realizado = realizado;

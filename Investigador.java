@@ -1,7 +1,9 @@
 
 /**
  * Representa a un profesional que participa en la expedición.
- * Cumple con el Requerimiento 2 del TP.
+ *
+ * @author Tu Nombre
+ * @version 1.0
  */
 public class Investigador {
 
@@ -19,7 +21,21 @@ public class Investigador {
         this.gps = false;
     }
 
+  /**
+     * Constructor que valida que los textos no estén vacíos.
+     * @throws IllegalArgumentException si algún texto es nulo o vacío.
+     */
     public Investigador(String nombre, String especialidad, String rango, boolean gps) {
+        if (nombre == null || nombre.trim().isEmpty()) {
+            throw new IllegalArgumentException("El nombre del investigador no puede ser nulo o vacío.");
+        }
+        if (especialidad == null || especialidad.trim().isEmpty()) {
+            throw new IllegalArgumentException("La especialidad no puede ser nula o vacía.");
+        }
+        if (rango == null || rango.trim().isEmpty()) {
+            throw new IllegalArgumentException("El rango no puede ser nulo o vacío.");
+        }
+        
         this.nombre = nombre;
         this.especialidad = especialidad;
         this.rango = rango;

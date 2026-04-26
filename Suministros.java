@@ -1,3 +1,10 @@
+/**
+ * Modela los víveres de supervivencia básica.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
+
 public class Suministros {
     //Atributos 
     private int paqueteComida;
@@ -8,7 +15,14 @@ public class Suministros {
         this.paqueteComida = 0;
         this.botellaAgua = 0;
     }
-    public Suministros(int paqueteComida, int botellaAgua) {
+
+    /**
+     * @throws IllegalArgumentException si las cantidades son negativas.
+     */
+ public Suministros(int paqueteComida, int botellaAgua) {
+        if (paqueteComida < 0 || botellaAgua < 0) {
+            throw new IllegalArgumentException("Las cantidades de suministros no pueden ser negativas.");
+        }
         this.paqueteComida = paqueteComida;
         this.botellaAgua = botellaAgua;
     }

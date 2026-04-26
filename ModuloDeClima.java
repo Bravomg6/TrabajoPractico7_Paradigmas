@@ -1,3 +1,9 @@
+/**
+ * Supervisa el entorno meteorológico en la zona.
+ *
+ * @author Tu Nombre
+ * @version 1.0
+ */
 public class ModuloDeClima {
     //Atributos
     private double temperatura;
@@ -12,7 +18,13 @@ public class ModuloDeClima {
         this.temperaturaMinima = 0;
         this.alerta = new Alerta();
     }
-    public ModuloDeClima(double temperatura, double temperaturaMaxima, double temperaturaMinima){
+ /**
+     * @throws IllegalArgumentException si la mínima es mayor a la máxima.
+     */
+    public ModuloDeClima(double temperatura, double temperaturaMaxima, double temperaturaMinima) {
+        if (temperaturaMinima >= temperaturaMaxima) {
+            throw new IllegalArgumentException("Error en Clima: La temperatura mínima no puede ser mayor o igual a la máxima.");
+        }
         this.temperatura = temperatura;
         this.temperaturaMaxima = temperaturaMaxima;
         this.temperaturaMinima = temperaturaMinima;
